@@ -51,7 +51,7 @@ class TestSafeDivision(unittest.TestCase):
     def test_result_with_decimal(self):
         """Test division that results in decimal"""
         result = safe_division(7, 3)
-        self.assertAlmostEqual(result, 2.333333, places=5)
+        self.assertAlmostEqual(result, 7/3, places=10)
     
     def test_large_numbers(self):
         """Test division with large numbers"""
@@ -89,7 +89,6 @@ class TestSafeDivision(unittest.TestCase):
         """Test that function works with mixed int and float inputs"""
         result = safe_division(15, 3.0)
         self.assertEqual(result, 5.0)
-
 
 class TestSafeDivisionEdgeCases(unittest.TestCase):
     """Test edge cases for the safe_division function"""
